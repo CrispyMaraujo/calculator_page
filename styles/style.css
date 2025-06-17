@@ -142,3 +142,24 @@ body {
 .btn-C:hover {
     background-color: #c6c0c1;
 }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .calculator {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .display {
+        font-size: 1.5em;
+    }
+
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 1.2em;
+    }
+}

@@ -1,26 +1,22 @@
 const display = document.getElementById("display");
 
-function appendToDisplay(input) {
-    display.value += input;
-    if (display.value.length > 20) {
-        display.value = "Input too long";
-    } else {
-        if (value == ".") {
-
-        } else if (display.value == "0") {
-            display.value = input;
-        }
-    }
-
+function appendToDisplay(value) {
+    display.value += value;
 }
-
 function clearDisplay() {
     display.value = "";
 }
-
+function calculate() {
+    try {
+        display.value = eval(display.value);
+    } catch (error) {
+        display.value = "Error";
+    } finally {
+        setTimeout(() => {
+            display.value = "";
+        }, 5000);
+    }
+}
 function deleteLastCharacter() {
     display.value = display.value.slice(0, -1);
-}
-
-function calculate() {
 }
